@@ -1,5 +1,6 @@
-import React from 'react';
-import { Bell, FileText, User } from 'lucide-react';
+import React from "react";
+import { Bell, FileText, User } from "lucide-react";
+import { WaysStationIcon } from "./icons/WaysStationIcon";
 
 interface BottomNavBarProps {
   notificationCount: number;
@@ -16,27 +17,11 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({
       <div className="grid grid-cols-5 items-end">
         {/* 1. Trang chủ */}
         <div className="flex flex-col items-center justify-center gap-1 py-0.5 text-[#6B7280] select-none">
-          <div className="w-6 h-6 flex items-center justify-center">
-            <svg
-              viewBox="0 0 36 24"
-              className="w-6 h-5 text-[#374151]"
-              fill="none"
+          <div className="h-6 flex items-center justify-center">
+            <WaysStationIcon
+              className="w-[32px] h-[15px] text-[#111827]"
               aria-hidden="true"
-            >
-              <path
-                d="M3 5L8.2 18L12.5 8.5L16.8 18L22 5"
-                stroke="currentColor"
-                strokeWidth="2.6"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-              <path
-                d="M24.5 15.5C25.5 17.2 27.5 18 29.5 17.5C31.5 17 32.2 15.2 30.8 13.8C29.4 12.4 26.2 11.8 25.5 9.6C24.9 7.6 26.5 5.6 29 5.5C30.8 5.4 32.1 6.2 32.8 7.2"
-                stroke="#0095FF"
-                strokeWidth="2.4"
-                strokeLinecap="round"
-              />
-            </svg>
+            />
           </div>
           <span className="text-[10.5px] font-medium leading-none">
             Trang chủ
@@ -102,7 +87,7 @@ export const BottomNavBar: React.FC<BottomNavBarProps> = ({
             <Bell className="w-[21px] h-[21px] stroke-[1.8]" />
             {notificationCount > 0 && (
               <span className="absolute -top-1 -right-1.5 min-w-[16px] h-[16px] px-1 rounded-full bg-[#EF4444] text-white text-[10px] font-bold flex items-center justify-center leading-none tabular-nums">
-                {notificationCount > 99 ? '99+' : notificationCount}
+                {notificationCount > 99 ? "99+" : notificationCount}
               </span>
             )}
           </div>
